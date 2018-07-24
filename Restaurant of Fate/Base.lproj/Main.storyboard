@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AcademyEngraved.ttf">
+            <string>AcademyEngravedLetPlain</string>
+        </array>
+        <array key="MarkerFeltThin.ttf">
+            <string>MarkerFelt-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Restaurant_of_Fate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant of Fate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUY-WT-HTg">
+                                <rect key="frame" x="16" y="60" width="343" height="48.5"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="K2d-FC-bgG">
+                                <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx6-2a-wBO">
+                                        <rect key="frame" x="0.0" y="93" width="121.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="km2-eo-Ujy">
+                                        <rect key="frame" x="126.5" y="0.0" width="122" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="Ecb-b0-tjT"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="UYw-HA-8wk"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uod-cf-hTL">
+                                        <rect key="frame" x="253.5" y="93" width="121.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzZ-U2-xMh">
+                                <rect key="frame" x="0.0" y="557" width="375" height="60"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="40"/>
+                                <state key="normal" title="Go!">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="go:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EmX-uv-cUI"/>
+                                    <segue destination="qtf-yY-kF6" kind="show" identifier="segue1" id="zA0-0H-hkQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.77601694475574545" blue="0.14730070090359171" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZUY-WT-HTg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="11M-Xa-CWh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fzZ-U2-xMh" secondAttribute="bottom" constant="50" id="GPT-z8-rWK"/>
+                            <constraint firstAttribute="trailing" secondItem="K2d-FC-bgG" secondAttribute="trailing" id="MnR-RR-2g8"/>
+                            <constraint firstItem="K2d-FC-bgG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Muq-RM-sw0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fzZ-U2-xMh" secondAttribute="trailing" id="Pys-rh-Twk"/>
+                            <constraint firstItem="ZUY-WT-HTg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Rx1-MC-Iwt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZUY-WT-HTg" secondAttribute="trailing" constant="16" id="TUT-et-JcC"/>
+                            <constraint firstItem="fzZ-U2-xMh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Twi-6N-Kp3"/>
+                            <constraint firstItem="K2d-FC-bgG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="prS-AI-UAK"/>
+                            <constraint firstItem="K2d-FC-bgG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yxD-nA-dRP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="km2-eo-Ujy" id="ZNZ-CV-ekj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="dnE-dB-epF">
+            <objects>
+                <viewController id="qtf-yY-kF6" customClass="MapViewController" customModule="Restaurant_of_Fate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bXd-Nv-X9H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RAC-sp-SmG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="365"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="365" id="2QW-n5-F32"/>
+                                </constraints>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="c5L-zO-8PW">
+                                <rect key="frame" x="10" y="478" width="355" height="149"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oJN-PU-oC6">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="22"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJD-mR-w6M">
+                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ive-ja-eRG">
+                                                <rect key="frame" x="177.5" y="0.0" width="177.5" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KIA-No-jh6">
+                                        <rect key="frame" x="0.0" y="57" width="355" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMR-SC-qWH">
+                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbv-Td-b2s">
+                                                <rect key="frame" x="177.5" y="0.0" width="177.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="JQ9-pI-Lvo">
+                                        <rect key="frame" x="0.0" y="113" width="355" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38X-it-4RT">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="36"/>
+                                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="20"/>
+                                                <state key="normal" title="Pick Again">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pickAgain:" destination="qtf-yY-kF6" eventType="touchUpInside" id="CMq-Rc-FOS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orh-CR-ZHR">
+                                                <rect key="frame" x="138" y="0.0" width="79" height="36"/>
+                                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="20"/>
+                                                <state key="normal" title="List View">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="hyY-56-HeR" kind="show" identifier="segue2" id="1Lp-qG-n8l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDk-b4-d7G">
+                                                <rect key="frame" x="252" y="0.0" width="103" height="36"/>
+                                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="20"/>
+                                                <state key="normal" title="Main Menu">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="TDk-b4-d7G" id="XFZ-nc-NDp">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.41930214868105342" blue="0.40251385334643841" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XtQ-OU-Nhh" firstAttribute="trailing" secondItem="c5L-zO-8PW" secondAttribute="trailing" constant="10" id="AbC-EK-eOX"/>
+                            <constraint firstItem="RAC-sp-SmG" firstAttribute="top" secondItem="bXd-Nv-X9H" secondAttribute="top" constant="20" id="Lzs-Fx-ik9"/>
+                            <constraint firstItem="RAC-sp-SmG" firstAttribute="leading" secondItem="XtQ-OU-Nhh" secondAttribute="leading" id="Sh7-KG-iyh"/>
+                            <constraint firstItem="c5L-zO-8PW" firstAttribute="leading" secondItem="XtQ-OU-Nhh" secondAttribute="leading" constant="10" id="dgW-H7-Fr5"/>
+                            <constraint firstItem="RAC-sp-SmG" firstAttribute="leading" secondItem="XtQ-OU-Nhh" secondAttribute="leading" id="dxd-a8-ela"/>
+                            <constraint firstItem="XtQ-OU-Nhh" firstAttribute="bottom" secondItem="c5L-zO-8PW" secondAttribute="bottom" constant="40" id="k1P-8p-U3m"/>
+                            <constraint firstAttribute="trailing" secondItem="RAC-sp-SmG" secondAttribute="trailing" id="m2l-Vb-gQr"/>
+                            <constraint firstItem="RAC-sp-SmG" firstAttribute="trailing" secondItem="XtQ-OU-Nhh" secondAttribute="trailing" constant="39" id="xT0-Ee-pD4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XtQ-OU-Nhh"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xT0-Ee-pD4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="RAC-sp-SmG" id="Ob3-mM-Pod"/>
+                        <outlet property="ratingLabel" destination="jbv-Td-b2s" id="pOU-Vf-Mtg"/>
+                        <outlet property="restaurantLabel" destination="Ive-ja-eRG" id="eas-2S-hk4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fie-Hf-hnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.27536231884062" y="118.20652173913044"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="VTI-mM-vjl">
+            <objects>
+                <viewController id="hyY-56-HeR" customClass="TableViewController" customModule="Restaurant_of_Fate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="POv-ef-5WP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="lvV-2I-U2b">
+                                <rect key="frame" x="0.0" y="564" width="375" height="53"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7K-nr-cn8">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="53"/>
+                                        <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="34"/>
+                                        <state key="normal" title="Main Menu">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="r7K-nr-cn8" id="Bft-lf-agG">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cC-xB-wVh">
+                                        <rect key="frame" x="187.5" y="1" width="187.5" height="52"/>
+                                        <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="33"/>
+                                        <state key="normal" title="Map View">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="qtf-yY-kF6" kind="popoverPresentation" popoverAnchorView="5cC-xB-wVh" id="jIL-qY-H1m">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ct1-8l-bEU">
+                                <rect key="frame" x="0.0" y="40" width="375" height="456"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="TJb-ht-U4I">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TJb-ht-U4I" id="V4g-Zc-BKW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hyY-56-HeR" id="L5e-od-zvr"/>
+                                    <outlet property="delegate" destination="hyY-56-HeR" id="JhC-Ir-oaF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.41930214869999999" blue="0.4025138533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dlr-rk-hou" firstAttribute="trailing" secondItem="lvV-2I-U2b" secondAttribute="trailing" id="60L-NX-WgN"/>
+                            <constraint firstItem="ct1-8l-bEU" firstAttribute="trailing" secondItem="Dlr-rk-hou" secondAttribute="trailing" id="D0h-SU-qVW"/>
+                            <constraint firstItem="lvV-2I-U2b" firstAttribute="top" secondItem="ct1-8l-bEU" secondAttribute="bottom" constant="68" id="FN7-rP-7HX"/>
+                            <constraint firstItem="lvV-2I-U2b" firstAttribute="leading" secondItem="Dlr-rk-hou" secondAttribute="leading" id="FcE-WB-Yf2"/>
+                            <constraint firstItem="ct1-8l-bEU" firstAttribute="leading" secondItem="Dlr-rk-hou" secondAttribute="leading" id="azc-AV-7Vi"/>
+                            <constraint firstItem="Dlr-rk-hou" firstAttribute="bottom" secondItem="lvV-2I-U2b" secondAttribute="bottom" constant="50" id="e5c-Ze-qDR"/>
+                            <constraint firstItem="ct1-8l-bEU" firstAttribute="top" secondItem="Dlr-rk-hou" secondAttribute="top" constant="20" id="wCw-By-alt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dlr-rk-hou"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYo-2k-rP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1885.5999999999999" y="826.23688155922048"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1Lp-qG-n8l"/>
+        <segue reference="jIL-qY-H1m"/>
+        <segue reference="XFZ-nc-NDp"/>
+    </inferredMetricsTieBreakers>
+</document>
